@@ -1,7 +1,7 @@
 var scorm = pipwerks.SCORM; // Seção SCORM
 scorm.version = "2004"; // Versão da API SCORM
 
-var aiNumber = "XXXX";
+var aiNumber = "0111";
 
 $(document).ready(init); // Inicia a AI.
 
@@ -15,7 +15,7 @@ function init () {
 	var flashvars = {};
 	flashvars.ai = "swf/AI-" + aiNumber + ".swf";
 	flashvars.width = "700";
-	flashvars.height = "500";
+	flashvars.height = "350";
 	
 	var params = {};
 	params.menu = "false";
