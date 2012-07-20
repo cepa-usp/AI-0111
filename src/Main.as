@@ -36,13 +36,10 @@ package
 		
 		override protected function init():void 
 		{
-			
-			
 			_reta.noticks = true;
 			_reta.draw();
 			retaReal.addChild(_reta);
 			retaReal.setChildIndex(retaReal.ponto, retaReal.numChildren - 1);
-			
 			
 			grafico.fxy.mouseEnabled = false;
 			
@@ -52,6 +49,11 @@ package
 			_planoCartesiano.enableTicks(SimpleGraph.AXIS_X, false);
 			_planoCartesiano.enableTicks(SimpleGraph.AXIS_Y, false);
 			grafico.addChild(_planoCartesiano);
+			
+			addChild(grafico);
+			addChild(retaReal);
+			addChild(f);
+			addChild(ponto);
 			
 			_curva.mouseEnabled = false;
 			_curva.addChild(_pontaSeta);

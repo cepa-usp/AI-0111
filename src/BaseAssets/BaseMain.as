@@ -62,6 +62,16 @@ package BaseAssets
 			0.0000, 0.0000, 0.0000, 1, 0
 		]);
 		
+		/*
+		 * Filtro de conversão para tons de cinza.
+		 */
+		protected const GRAYSCALE_FILTER_BLOCK:ColorMatrixFilter = new ColorMatrixFilter([
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.0000, 0.0000, 0.0000, 1, 0
+		]);
+		
 		//Camadas:
 		private var layerBorda:Sprite;
 		private var layerDebug:Sprite;
@@ -194,11 +204,17 @@ package BaseAssets
 		protected function blockAI():void
 		{
 			layerBlock.visible = true;
+			
+			layerMenu.filters = [GRAYSCALE_FILTER_BLOCK];
+			layerAtividade.filters = [GRAYSCALE_FILTER_BLOCK];
 		}
 		
 		protected function unblockAI():void
 		{
 			layerBlock.visible = false;
+			
+			layerMenu.filters = [];
+			layerAtividade.filters = [];
 		}
 		
 		/**
