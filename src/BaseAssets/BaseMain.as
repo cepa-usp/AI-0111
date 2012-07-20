@@ -205,16 +205,22 @@ package BaseAssets
 		{
 			layerBlock.visible = true;
 			
-			layerMenu.filters = [GRAYSCALE_FILTER_BLOCK];
-			layerAtividade.filters = [GRAYSCALE_FILTER_BLOCK];
+			//layerMenu.filters = [GRAYSCALE_FILTER_BLOCK];
+			//layerAtividade.filters = [GRAYSCALE_FILTER_BLOCK];
+			
+			layerMenu.alpha = 0.5;
+			layerAtividade.alpha = 0.5;
 		}
 		
 		protected function unblockAI():void
 		{
 			layerBlock.visible = false;
 			
-			layerMenu.filters = [];
-			layerAtividade.filters = [];
+			//layerMenu.filters = [];
+			//layerAtividade.filters = [];
+			
+			layerMenu.alpha = 1;
+			layerAtividade.alpha = 1;
 		}
 		
 		/**
