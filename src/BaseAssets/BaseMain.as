@@ -158,7 +158,7 @@ package BaseAssets
 			
 			botoes = new MenuBar();
 			botoes.x = rect.width - botoes.BTN_WIDTH - 12;
-			botoes.y = rect.height - 15;
+			botoes.y = rect.height - 12;
 			layerMenu.addChild(botoes);
 			
 			bordaAtividade = new Borda();
